@@ -81,7 +81,7 @@ class _AuthThreePageState extends State<AuthThreePage> {
                       ///  Welcome Header text .
                       ///------------------------------------------------
                       Text(
-                        "Welcome to this awesome login app. \n You are awesome",
+                        "Welcome to this awesome FlutterX UI App. \n You are awesome",
                         style: TextStyle(
                           color: Colors.white70,
                           fontSize: 18.0,
@@ -100,7 +100,7 @@ class _AuthThreePageState extends State<AuthThreePage> {
                     ///------------------------------------------------
                     Expanded(
                       child: RaisedButton(
-                        color: Colors.red,
+                        color: Colors.orange,
                         textColor: Colors.white,
                         elevation: 0,
                         shape: RoundedRectangleBorder(
@@ -146,8 +146,8 @@ class _AuthThreePageState extends State<AuthThreePage> {
                 ///  OutlineButton icon Sign up and sign in with google auth .
                 ///------------------------------------------------
                 OutlineButton.icon(
-                  borderSide: BorderSide(color: Colors.red),
-                  color: Colors.red,
+                  borderSide: BorderSide(color: Colors.orange),
+                  color: Colors.orange,
                   textColor: Colors.white,
                   ///------------------------------------------------
                   ///  Changing corner shape of OutlineButton.
@@ -186,7 +186,7 @@ class _AuthThreePageState extends State<AuthThreePage> {
                             ? Colors.white
                             : Colors.black,
                         color:
-                        _formsIndex == 1 ? Colors.red : Colors.white,
+                        _formsIndex == 1 ? Colors.orange : Colors.white,
                         child: Text("Login"),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20.0)),
@@ -202,7 +202,7 @@ class _AuthThreePageState extends State<AuthThreePage> {
                             ? Colors.white
                             : Colors.black,
                         color:
-                        _formsIndex == 2 ? Colors.red : Colors.white,
+                        _formsIndex == 2 ? Colors.orange : Colors.white,
                         child: Text("Signup"),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20.0)),

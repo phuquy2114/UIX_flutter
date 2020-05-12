@@ -26,7 +26,7 @@ class _NewUserState extends State<NewUser> {
           gradient: LinearGradient(
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
-              colors: [Colors.blueGrey, Colors.lightBlueAccent]),
+              colors: [Colors.deepOrange, Colors.orange]),
         ),
 
         /// -------------------------------
@@ -144,7 +144,7 @@ class _TextNewState extends State<TextNew> {
             ),
             Center(
               child: Text(
-                'We can start something new',
+                'Hello World \n FlutterX UI',
                 style: TextStyle(
                   fontSize: 24,
                   color: Colors.white,
@@ -288,7 +288,7 @@ class _ButtonNewUserState extends State<ButtonNewUser> {
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(boxShadow: [
           BoxShadow(
-            color: Colors.blue[300],
+            color: Colors.orange[300],
             blurRadius: 10.0, // has the effect of softening the shadow
             spreadRadius: 1.0, // has the effect of extending the shadow
             offset: Offset(
@@ -307,14 +307,14 @@ class _ButtonNewUserState extends State<ButtonNewUser> {
               Text(
                 'OK',
                 style: TextStyle(
-                  color: Colors.lightBlueAccent,
+                  color: Colors.deepOrange,
                   fontSize: 14,
                   fontWeight: FontWeight.w700,
                 ),
               ),
               Icon(
                 Icons.arrow_forward,
-                color: Colors.lightBlueAccent,
+                color: Colors.deepOrange,
               ),
             ],
           ),
@@ -352,8 +352,8 @@ class UserOld extends StatelessWidget {
             FlatButton(
               padding: EdgeInsets.all(0),
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => LoginPage1()));
+//                Navigator.push(context,
+//                    MaterialPageRoute(builder: (context) => LoginPage1()));
               },
               child: Text(
                 'Sing in',

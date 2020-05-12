@@ -42,7 +42,7 @@ class LoginForm extends StatelessWidget {
               border: OutlineInputBorder(),
               hintStyle: TextStyle(color: Colors.grey),
             ),
-            style: TextStyle(color: Colors.red),
+            style: TextStyle(color: Colors.orange),
           ),
           const SizedBox(height: 10.0),
 
@@ -56,7 +56,7 @@ class LoginForm extends StatelessWidget {
               border: OutlineInputBorder(),
               hintStyle: TextStyle(color: Colors.grey),
             ),
-            style: TextStyle(color: Colors.red),
+            style: TextStyle(color: Colors.orange),
           ),
           const SizedBox(height: 10.0),
 
@@ -64,7 +64,7 @@ class LoginForm extends StatelessWidget {
           ///  RaisedButton for submitting login data.
           ///------------------------------------------------
           RaisedButton(
-            color: Colors.red,
+            color: Colors.orange,
             textColor: Colors.white,
             elevation: 0,
             shape: RoundedRectangleBorder(

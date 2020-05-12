@@ -194,7 +194,7 @@ class _LoginPageState extends State<LoginPage2> {
           gradient: LinearGradient(
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,
-              colors: [Color(0xfffbb448), Color(0xfff7892b)])),
+              colors: [Colors.lightBlueAccent, Colors.red])),
 
       /// -----------------------------------------
       /// child text widget submit to button
@@ -312,7 +312,7 @@ class _LoginPageState extends State<LoginPage2> {
               /// -----------------------------------------
               /// TExt with one facebook title
               /// -----------------------------------------
-              child: Text('Log in with Facebook',
+              child: Text('Continue with Facebook',
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 18,
@@ -333,7 +333,7 @@ class _LoginPageState extends State<LoginPage2> {
         children: <Widget>[
           Text(
             'Don\'t have an account ?',
-            style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
+            style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600,color: Colors.redAccent),
           ),
           SizedBox(
             width: 10,
@@ -346,7 +346,7 @@ class _LoginPageState extends State<LoginPage2> {
             child: Text(
               'Register',
               style: TextStyle(
-                  color: Color(0xfff79c4f),
+                  color: Colors.red,
                   fontSize: 13,
                   fontWeight: FontWeight.w600),
             ),
@@ -366,28 +366,28 @@ class _LoginPageState extends State<LoginPage2> {
     return RichText(
       textAlign: TextAlign.center,
       text: TextSpan(
-          text: 'd',
+          text: 'Flutter',
           style: GoogleFonts.portLligatSans(
             textStyle: Theme.of(context).textTheme.display1,
             fontSize: 30,
             fontWeight: FontWeight.w700,
-            color: Color(0xffe46b10),
+            color: Colors.red,
           ),
           children: [
             /// -----------------------------------------
             /// make custom Text title with custom color.
             /// -----------------------------------------
             TextSpan(
-              text: 'ev',
-              style: TextStyle(color: Colors.black, fontSize: 30),
+              text: 'X',
+              style: TextStyle(color: Colors.blueAccent, fontSize: 30),
             ),
 
             /// -----------------------------------------
             /// make custom Text title with custom color.
             /// -----------------------------------------
             TextSpan(
-              text: 'rnz',
-              style: TextStyle(color: Color(0xffe46b10), fontSize: 30),
+              text: ' UI',
+              style: TextStyle(color: Colors.red, fontSize: 30),
             ),
           ]),
     );
@@ -451,7 +451,7 @@ class BezierContainer extends StatelessWidget {
                   gradient: LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
-                      colors: [Color(0xfffbb448), Color(0xffe46b10)])),
+                      colors: [Colors.lightBlueAccent, Colors.red])),
             ),
           ),
         ));

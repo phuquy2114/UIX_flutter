@@ -70,7 +70,7 @@ class SignUpForm extends StatelessWidget {
           ///  RaisedButton for submitting Sign up data.
           ///------------------------------------------------
           RaisedButton(
-            color: Colors.red,
+            color: Colors.orange,
             textColor: Colors.white,
             elevation: 0,
             shape: RoundedRectangleBorder(

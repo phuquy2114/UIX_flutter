@@ -178,7 +178,7 @@ class _SignUpPageState extends State<SignUpPage> {
           gradient: LinearGradient(
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,
-              colors: [Color(0xfffbb448), Color(0xfff7892b)])),
+              colors: [Colors.lightBlueAccent, Colors.red])),
 
       /// -----------------------------------------
       /// child text widget submit to button
@@ -199,7 +199,7 @@ class _SignUpPageState extends State<SignUpPage> {
         children: <Widget>[
           Text(
             'Already have an account ?',
-            style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
+            style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600,color: Colors.redAccent),
           ),
           SizedBox(
             width: 10,
@@ -212,7 +212,7 @@ class _SignUpPageState extends State<SignUpPage> {
             child: Text(
               'Login',
               style: TextStyle(
-                  color: Color(0xfff79c4f),
+                  color: Colors.red,
                   fontSize: 13,
                   fontWeight: FontWeight.w600),
             ),
@@ -233,12 +233,12 @@ class _SignUpPageState extends State<SignUpPage> {
     return RichText(
       textAlign: TextAlign.center,
       text: TextSpan(
-          text: 'd',
+          text: 'Flutter',
           style: GoogleFonts.portLligatSans(
             textStyle: Theme.of(context).textTheme.display1,
             fontSize: 30,
             fontWeight: FontWeight.w700,
-            color: Color(0xffe46b10),
+            color: Colors.red,
           ),
           children: [
 
@@ -246,16 +246,16 @@ class _SignUpPageState extends State<SignUpPage> {
             /// make custom Text title with custom color.
             /// -----------------------------------------
             TextSpan(
-              text: 'ev',
-              style: TextStyle(color: Colors.black, fontSize: 30),
+              text: 'X',
+              style: TextStyle(color: Colors.blueAccent, fontSize: 30),
             ),
 
             /// -----------------------------------------
             /// make custom Text title with custom color.
             /// -----------------------------------------
             TextSpan(
-              text: 'rnz',
-              style: TextStyle(color: Color(0xffe46b10), fontSize: 30),
+              text: ' UI',
+              style: TextStyle(color: Colors.red, fontSize: 30),
             ),
 
           ]),
@@ -303,7 +303,7 @@ class BezierContainer extends StatelessWidget {
       /// Rotate shape with Transform.rotate.
       /// -----------------------------------------
         child: Transform.rotate(
-      angle: -pi / 3.5,
+      angle: -pi / 3.9,
       child: ClipPath(
         clipper: ClipPainter(),
 
@@ -318,7 +318,7 @@ class BezierContainer extends StatelessWidget {
               gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
-                  colors: [Color(0xfffbb448), Color(0xffe46b10)])),
+                  colors: [Colors.lightBlueAccent, Colors.red])),
         ),
       ),
     ));

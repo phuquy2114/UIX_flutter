@@ -22,7 +22,7 @@ class _LoginPageState extends State<LoginPage1> {
           gradient: LinearGradient(
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
-              colors: [Colors.blueGrey, Colors.lightBlueAccent]),
+              colors: [Colors.deepOrange, Colors.orange]),
         ),
 
         /// -------------------------------
@@ -101,7 +101,7 @@ class _ButtonLoginState extends State<ButtonLogin> {
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
-              color: Colors.blue[300],
+              color: Colors.orange[300],
               blurRadius: 10.0, // has the effect of softening the shadow
               spreadRadius: 1.0, // has the effect of extending the shadow
               offset: Offset(
@@ -125,14 +125,14 @@ class _ButtonLoginState extends State<ButtonLogin> {
               Text(
                 'OK',
                 style: TextStyle(
-                  color: Colors.lightBlueAccent,
+                  color: Colors.deepOrange,
                   fontSize: 14,
                   fontWeight: FontWeight.w700,
                 ),
               ),
               Icon(
                 Icons.arrow_forward,
-                color: Colors.lightBlueAccent,
+                color: Colors.deepOrange,
               ),
             ],
           ),
@@ -292,7 +292,7 @@ class _TextLoginState extends State<TextLogin> {
             ),
             Center(
               child: Text(
-                'A world of possibility in an app',
+                'Hello World \n FlutterX UI',
                 style: TextStyle(
                   fontSize: 24,
                   color: Colors.white,
