@@ -200,7 +200,7 @@ class _AboutAppPageState extends State<AboutAppPage> {
                 leading: Icon(Icons.file_download),
                 title: Text("Check for updates"),
                 onTap: () {
-                  configs.setupRemoteConfig(_scaffoldKey);
+//                  configs.setupRemoteConfig(_scaffoldKey);
                 },
               ),
             ],

@@ -98,6 +98,7 @@ import 'package:flutterxui/features/search_bar/search_page_2_code.dart';
 import 'package:flutterxui/features/settings/1_settings_code.dart';
 import 'package:flutterxui/features/settings/2_settings_code.dart';
 import 'package:flutterxui/features/settings/3_settings_code.dart';
+import 'package:flutterxui/features/settings/4_settings_code.dart';
 import 'package:flutterxui/features/sliders/1_pager_slider_code.dart';
 import 'package:flutterxui/features/sliders/2_pager_slider_code.dart';
 import 'package:flutterxui/features/sliders/3_pager_slider_code.dart';
@@ -1709,6 +1710,13 @@ class _MainPageState extends State<HomePage> {
         _buildSubSectionButton(
           context: context,
           title: 'Settings One',
+          navigatePage: SettingsPage4.routeName,
+          sourceFilePath: 'lib/dart_code/settings/4_settings_code.dart',
+        ),
+        divider(),
+        _buildSubSectionButton(
+          context: context,
+          title: 'Settings Two',
           navigatePage: SettingsPage1.routeName,
           sourceFilePath: 'lib/dart_code/settings/1_settings_code.dart',
         ),
@@ -1719,7 +1727,7 @@ class _MainPageState extends State<HomePage> {
         //==================================
         _buildSubSectionButton(
           context: context,
-          title: 'Settings Two',
+          title: 'Settings Three',
           navigatePage: SettingsPage2.routeName,
           sourceFilePath: 'lib/dart_code/settings/2_settings_code.dart',
         ),
@@ -1730,7 +1738,7 @@ class _MainPageState extends State<HomePage> {
         //==================================
         _buildSubSectionButton(
           context: context,
-          title: 'Settings Three',
+          title: 'Settings Four',
           navigatePage: SettingsPage_3.routeName,
           sourceFilePath: 'lib/dart_code/settings/3_settings_code.dart',
         ),

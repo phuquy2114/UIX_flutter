@@ -102,6 +102,7 @@ import 'package:flutterxui/features/search_bar/search_page_2_code.dart';
 import 'package:flutterxui/features/settings/1_settings_code.dart';
 import 'package:flutterxui/features/settings/2_settings_code.dart';
 import 'package:flutterxui/features/settings/3_settings_code.dart';
+import 'package:flutterxui/features/settings/4_settings_code.dart';
 import 'package:flutterxui/features/settings/settings.dart';
 import 'package:flutterxui/features/signup/1_signup_code.dart';
 import 'package:flutterxui/features/signup/2_signup_code.dart';
@@ -266,6 +267,7 @@ class _MyAppState extends State<MyApp> {
             SettingsPage1.routeName: (context) => SettingsPage1(),
             SettingsPage2.routeName: (context) => SettingsPage2(),
             SettingsPage_3.routeName: (context) => SettingsPage_3(),
+            SettingsPage4.routeName: (context) => SettingsPage4(),
             NewUser.routeName: (context) => NewUser(),
             SignUpPage.routeName: (context) => SignUpPage(),
             SignUp.routeName: (context) => SignUp(),

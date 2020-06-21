@@ -1,26 +1,23 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutterxui/consts.dart';
+import 'package:flutterxui/res/text_style.dart';
+import 'package:flutterxui/res/utils.dart';
 
-/**
- * Author: Damodar Lohani
- * profile: https://github.com/lohanidamodar
- */
+
 
 class SettingsPage_3 extends StatelessWidget {
   static const routeName = '/SettingsPage_3';
-  final TextStyle headerStyle = TextStyle(
-    color: Colors.grey.shade800,
-    fontWeight: FontWeight.bold,
-    fontSize: 20.0,
-  );
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey.shade200,
-
+      appBar: AppBar(
+        title: Text('Settings',style: textStyle.bigTextAppBar(utils.isLight())),
+      ),
       /// ----------------------------------------------------------
       /// Build  scrollable  content with help of SingleChildScrollView widget
       /// ----------------------------------------------------------
@@ -30,10 +27,6 @@ class SettingsPage_3 extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             const SizedBox(height: 10.0),
-
-            /// ----------------------------------------------------------
-            /// Card widget header
-            /// ----------------------------------------------------------
             Card(
               elevation: 0.5,
               margin: const EdgeInsets.symmetric(
@@ -49,38 +42,33 @@ class SettingsPage_3 extends StatelessWidget {
                           padding: const EdgeInsets.all(12.0),
                           child: CircleAvatar(
                             radius: 40,
-
-                            /// ----------------------------------------------------------
-                            /// image widget header
-                            /// ----------------------------------------------------------
                             backgroundImage: NetworkImage(
                                 Constants.images[Random().nextInt(20)]),
                           ),
                         ),
-                        Text("Damodar Lohani"),
+                        Text("John Doe"),
                       ],
                     ),
                   ),
                   _buildDivider(),
-
-                  /// ----------------------------------------------------------
-                  /// Change Private Account SwitchListTile widget
-                  /// ----------------------------------------------------------
-                  SwitchListTile(
-                    activeColor: Colors.amber,
-                    value: true,
-                    title: Text("Private Account"),
-                    onChanged: (val) {},
-                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      child: Text('Show Profile'),
+                    ),
+                  )
                 ],
               ),
             ),
             const SizedBox(height: 20.0),
             Text(
-              "PUSH NOTIFICATIONS",
-              style: headerStyle,
+              "General Settings".toUpperCase(),
+              style: TextStyle(
+                color: Colors.grey.shade800,
+                fontWeight: FontWeight.bold,
+                fontSize: 20.0,
+              ),
             ),
-
             Card(
               margin: const EdgeInsets.symmetric(
                 vertical: 8.0,
@@ -88,55 +76,102 @@ class SettingsPage_3 extends StatelessWidget {
               ),
               child: Column(
                 children: <Widget>[
-                  /// ----------------------------------------------------------
-                  /// Change Received notification SwitchListTile widget
-                  /// ----------------------------------------------------------
+                  ListTile(
+                    leading: Icon(
+                      Entypo.email,
+                      color: Colors.lightGreen,
+                    ),
+                    title: Text("Change E-Mail"),
+                    trailing: Icon(Icons.keyboard_arrow_right),
+                    onTap: () {
+                      //open change password
+                    },
+                  ),
+                  _buildDivider(),
+                  ListTile(
+                    leading: Icon(
+                      AntDesign.phone,
+                      color: Colors.lightGreen,
+                    ),
+                    title: Text("Change Phone Number"),
+                    trailing: Icon(Icons.keyboard_arrow_right),
+                    onTap: () {
+                      //open change location
+                    },
+                  ),
+                  _buildDivider(),
+                  ListTile(
+                    leading: Icon(
+                      Icons.lock_outline,
+                      color: Colors.lightGreen,
+                    ),
+                    title: Text("Change Password"),
+                    trailing: Icon(Icons.keyboard_arrow_right),
+                    onTap: () {
+                      //open change password
+                    },
+                  ),
+                  _buildDivider(),
+                  ListTile(
+                    leading: Icon(
+                      MaterialCommunityIcons.earth,
+                      color: Colors.lightGreen,
+                    ),
+                    title: Text("Change Language"),
+                    trailing: Icon(Icons.keyboard_arrow_right),
+                    onTap: () {
+                      //open change language
+                    },
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20.0),
+            Text(
+              "Notification Settings".toUpperCase(),
+              style: TextStyle(
+                color: Colors.grey.shade800,
+                fontWeight: FontWeight.bold,
+                fontSize: 20.0,
+              ),
+            ),
+            Card(
+              margin: const EdgeInsets.symmetric(
+                vertical: 8.0,
+                horizontal: 0,
+              ),
+              child: Column(
+                children: <Widget>[
                   SwitchListTile(
-                    activeColor: Colors.amber,
+                    activeColor: Colors.lightGreen,
                     value: true,
-                    title: Text("Received notification"),
+                    title: Text("Sub-Category"),
                     onChanged: (val) {},
                   ),
                   _buildDivider(),
-
-                  /// ----------------------------------------------------------
-                  /// Change Received newsletter SwitchListTile widget
-                  /// ----------------------------------------------------------
                   SwitchListTile(
-                    activeColor: Colors.amber,
+                    activeColor:  Colors.lightGreen,
                     value: false,
-                    title: Text("Received newsletter"),
+                    title: Text("Courses"),
                     onChanged: null,
                   ),
                   _buildDivider(),
-
-                  /// ----------------------------------------------------------
-                  /// Change Received Offer Notification SwitchListTile widget
-                  /// ----------------------------------------------------------
                   SwitchListTile(
-                    activeColor: Colors.amber,
+                    activeColor: Colors.lightGreen,
                     value: true,
-                    title: Text("Received Offer Notification"),
+                    title: Text("Tickets Replies"),
                     onChanged: (val) {},
                   ),
                   _buildDivider(),
-
-                  /// ----------------------------------------------------------
-                  /// Change Received  App Updates SwitchListTile widget
-                  /// ----------------------------------------------------------
                   SwitchListTile(
-                    activeColor: Colors.amber,
+                    activeColor: Colors.lightGreen,
                     value: true,
-                    title: Text("Received App Updates"),
+                    title: Text("New course has been added"),
                     onChanged: null,
                   ),
                 ],
               ),
             ),
-
-            /// ----------------------------------------------------------
-            /// Card widget for logout action
-            /// ----------------------------------------------------------
             Card(
               margin: const EdgeInsets.symmetric(
                 vertical: 8.0,

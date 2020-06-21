@@ -1,9 +1,9 @@
-/**
- * Author: Damodar Lohani
- * profile: https://github.com/lohanidamodar
- */
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutterxui/res/text_style.dart';
+import 'package:flutterxui/res/utils.dart';
+
 
 class SettingsPage1 extends StatefulWidget {
   static const routeName = '/SettingsPage1';
@@ -25,7 +25,9 @@ class _SettingsPageState extends State<SettingsPage1> {
     /// ----------------------------------------------------------
     return Scaffold(
       backgroundColor: Colors.grey.shade200,
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text('Settings',style: textStyle.bigTextAppBar(utils.isLight())),
+      ),
       body: Stack(
         fit: StackFit.expand,
         children: <Widget>[
@@ -47,47 +49,86 @@ class _SettingsPageState extends State<SettingsPage1> {
                   elevation: 8.0,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0)),
-                  color: Colors.amber,
-                  child: ListTile(
-                    onTap: () {
-                      //open edit profile
-                    },
-                    title: Text(
-                      "John Doe",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    leading: CircleAvatar(
-                      backgroundImage: AssetImage('assets/images/02.png'),
-                    ),
-                    trailing: Icon(
-                      Icons.edit,
-                      color: Colors.white,
+                  color: Colors.deepOrange,
+                  child: Container(
+                    height: ScreenUtil().setHeight(70),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Padding(
+                          padding:
+                          const EdgeInsets.only(left: 8.0, right: 8.0),
+                          child: CircleAvatar(
+                            radius: 20,
+                            backgroundImage: NetworkImage('https://picsum.photos/500/600?random=20'),
+                          ),
+                        ),
+                        Expanded(
+                          child: Text(
+                            "John Doe",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding:
+                          const EdgeInsets.only(left: 8.0, right: 8.0),
+                          child: Icon(
+                            AntDesign.edit,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
                 const SizedBox(height: 10.0),
 
-                /// ----------------------------------------------------------
-                /// Card widget header  localization settings
-                /// ----------------------------------------------------------
+                Text(
+                  "General Settings",
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.deepOrangeAccent,
+                  ),
+                ),
                 Card(
                   elevation: 4.0,
-                  margin: const EdgeInsets.fromLTRB(32.0, 8.0, 32.0, 16.0),
+                  margin: const EdgeInsets.fromLTRB(20.0, 8.0, 20.0, 16.0),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0)),
                   child: Column(
                     children: <Widget>[
-
-                      /// ----------------------------------------------------------
-                      /// Change Password ListTile widget
-                      /// ----------------------------------------------------------
+                      ListTile(
+                        leading: Icon(
+                          Entypo.email,
+                          color: Colors.orange,
+                        ),
+                        title: Text("Change E-Mail"),
+                        trailing: Icon(Icons.keyboard_arrow_right),
+                        onTap: () {
+                          //open change password
+                        },
+                      ),
+                      _buildDivider(),
+                      ListTile(
+                        leading: Icon(
+                          AntDesign.phone,
+                          color: Colors.orange,
+                        ),
+                        title: Text("Change Phone Number"),
+                        trailing: Icon(Icons.keyboard_arrow_right),
+                        onTap: () {
+                          //open change location
+                        },
+                      ),
+                      _buildDivider(),
                       ListTile(
                         leading: Icon(
                           Icons.lock_outline,
-                          color: Colors.amber,
+                          color: Colors.orange,
                         ),
                         title: Text("Change Password"),
                         trailing: Icon(Icons.keyboard_arrow_right),
@@ -96,14 +137,10 @@ class _SettingsPageState extends State<SettingsPage1> {
                         },
                       ),
                       _buildDivider(),
-
-                      /// ----------------------------------------------------------
-                      /// Change Language ListTile widget
-                      /// ----------------------------------------------------------
                       ListTile(
                         leading: Icon(
                           MaterialCommunityIcons.earth,
-                          color: Colors.amber,
+                          color: Colors.orange,
                         ),
                         title: Text("Change Language"),
                         trailing: Icon(Icons.keyboard_arrow_right),
@@ -111,79 +148,49 @@ class _SettingsPageState extends State<SettingsPage1> {
                           //open change language
                         },
                       ),
-                      _buildDivider(),
 
-
-                      /// ----------------------------------------------------------
-                      /// Change Location ListTile widget
-                      /// ----------------------------------------------------------
-                      ListTile(
-                        leading: Icon(
-                          Icons.location_on,
-                          color: Colors.amber,
-                        ),
-                        title: Text("Change Location"),
-                        trailing: Icon(Icons.keyboard_arrow_right),
-                        onTap: () {
-                          //open change location
-                        },
-                      ),
                     ],
                   ),
                 ),
+
                 const SizedBox(height: 20.0),
                 Text(
                   "Notification Settings",
                   style: TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
-                    color: Colors.indigo,
+                    color: Colors.deepOrangeAccent,
                   ),
                 ),
-
-                /// ----------------------------------------------------------
-                /// Change Received notification SwitchListTile widget
-                /// ----------------------------------------------------------
                 SwitchListTile(
-                  activeColor: Colors.amber,
+                  activeColor: Colors.orange,
                   contentPadding: const EdgeInsets.all(0),
                   value: true,
-                  title: Text("Received notification"),
+                  title: Text("Sub-Category"),
                   onChanged: (val) {},
                 ),
-
-                /// ----------------------------------------------------------
-                /// Change Received newsletter SwitchListTile widget
-                /// ----------------------------------------------------------
                 SwitchListTile(
-                  activeColor: Colors.amber,
+                  activeColor: Colors.orange,
                   contentPadding: const EdgeInsets.all(0),
                   value: false,
-                  title: Text("Received newsletter"),
+                  title: Text("Courses"),
                   onChanged: null,
                 ),
-
-                /// ----------------------------------------------------------
-                /// Change Received Offer Notification SwitchListTile widget
-                /// ----------------------------------------------------------
                 SwitchListTile(
-                  activeColor: Colors.amber,
+                  activeColor: Colors.orange,
                   contentPadding: const EdgeInsets.all(0),
                   value: true,
-                  title: Text("Received Offer Notification"),
+                  title: Text("Tickets Replies"),
                   onChanged: (val) {},
                 ),
-
-                /// ----------------------------------------------------------
-                /// Change Received App Updates SwitchListTile widget
-                /// ----------------------------------------------------------
                 SwitchListTile(
-                  activeColor: Colors.amber,
+                  activeColor: Colors.orange,
                   contentPadding: const EdgeInsets.all(0),
                   value: true,
-                  title: Text("Received App Updates"),
+                  title: Text("New course has been added"),
                   onChanged: null,
                 ),
+
                 const SizedBox(height: 60.0),
               ],
             ),

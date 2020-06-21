@@ -77,7 +77,8 @@ class _ListWheelScrollViewWidgetState
                       style: textStyle.largeTextStyle,
                     )),
               );
-            })
+            }
+            )
           ],
         ),
       ),
